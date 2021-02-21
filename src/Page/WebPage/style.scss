@@ -1,0 +1,106 @@
+#webpage {
+  position: relative;
+  height: auto;
+  h5 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 31px;
+    /* or 172% */
+
+    letter-spacing: 0.02em;
+
+    color: #494949;
+  }
+  .circle {
+    clip-path: circle(50% at 50% 50%);
+    background-color: #fff8f5;
+    height: 35rem;
+    width: 35rem;
+    position: absolute;
+    right: 22rem;
+    // z-index: 1;
+    // top:6rem
+  }
+  .testi-img {
+    // z-index: 1;
+    position: relative;
+    height: 30rem;
+    margin-top: 3rem;
+    top: 1rem;
+  }
+  .second-layer {
+    background-color: #222222;
+    p {
+      color: white;
+    }
+    h5 {
+      color: white;
+    }
+    .circle {
+      background-color: #2e2e2e;
+      height: 37rem;
+      width: 37rem;
+      position: absolute;
+      right: 6rem;
+      bottom: top;
+      top: 2rem;
+    }
+    .customer {
+      width: fit-content;
+      padding: 2px 10px;
+      border: solid 1px;
+      border-radius: 5px;
+    }
+  }
+  .third-layer {
+    padding: 2rem 10rem;
+    display: inline-flex;
+    column-gap: 10rem;
+    .circle-img {
+      height: 10rem;
+      border-radius: 50%;
+    }
+    span {
+      background-color: green;
+      padding: 0.4rem;
+      margin-left: 2rem;
+    }
+    h6 {
+      font-size: 1.5rem;
+      margin: 1rem 0 0 1rem;
+    }
+  }
+  .fourth-layer {
+    background-color: #fff8f5;
+    padding: 4rem 4rem 0;
+    // border: solid;
+    overflow-y: hidden;
+    position: relative;
+    .circle-fourth {
+      clip-path: circle(50% at 50% 50%);
+      background: rgba(255, 92, 0, 0.03);
+      height: 40rem;
+      width: 40rem;
+      position: absolute;
+      bottom: -5rem;
+      right: 9rem;
+    }
+    img {
+      z-index: 1;
+      position: relative;
+      bottom: -4px;
+    }
+  }
+}
