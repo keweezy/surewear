@@ -8,7 +8,7 @@ import './style.scss';
 import Modal from '../../Components/Modal';
 
 const WebPage = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const onClose = () => {
     setOpen(!open);
   };
