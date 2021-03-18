@@ -35,22 +35,20 @@
     height: 35rem;
     width: 35rem;
     position: absolute;
-    right: 17rem;
-    top: 13rem;
+    left: 3%;
+    top: 5rem;
     z-index: -1;
     @media screen and (max-width: 768px) {
       height: 35rem;
       width: 35rem;
       left: auto;
-      top: 37rem;
-      right:auto
+      right: auto;
     }
     @media screen and (max-width: 576px) {
       height: 21rem;
       width: 21rem;
       left: auto;
-      top: 34rem;
-      right:auto
+      right: auto;
     }
   }
   .testi-img {
@@ -81,8 +79,6 @@
       height: 37rem;
       width: 37rem;
       position: absolute;
-      right: 6rem;
-      bottom: top;
       top: 2rem;
       clip-path: circle(50% at 50% 50%);
       @media screen and (max-width: 576px) {
@@ -213,6 +209,7 @@
   .img-position {
     display: inline-flex;
     padding-left: 4rem;
+    position: relative;
     @media (max-width: 576px) {
       display: flex;
       justify-content: center;
@@ -223,6 +220,14 @@
     @media (min-width: 577px) {
       padding-left: 7rem;
       width: 64%;
+    }
+  }
+  .justify-tilt {
+    overflow: hidden;
+    border: solid transparent;
+    @media (max-width: 812px) {
+      display: flex;
+      justify-content: center;
     }
   }
 }

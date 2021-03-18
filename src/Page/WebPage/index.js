@@ -89,7 +89,7 @@ const WebPage = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item md sm xs={12}>
+        <Grid item md sm xs={12} className="justify-tilt">
           <Box className="img-position">
             <img src={testimonialPic} alt="" className="testi-img" />
             <div className="circle1"></div>
