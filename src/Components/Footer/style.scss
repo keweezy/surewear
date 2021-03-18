@@ -1,20 +1,28 @@
 #footer {
   background-color: #25201d;
-  padding: 3rem 7rem;
+  padding: 3rem 3rem;
+  @media screen and (max-width: 576px) {
+    padding: 2rem 1rem;
+    h4 {
+      font-size: 32px !important;
+    }
+    p{
+      font-size: 12px !important;
+    }
+  }
   h4 {
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
     line-height: 40px;
-    /* or 100% */
 
     letter-spacing: -0.03em;
 
     color: #ffffff;
   }
   h5 {
-    font-family: Roboto;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -24,7 +32,7 @@
   }
   p {
     color: white;
-    font-family: Roboto;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -38,6 +46,11 @@
   .mobile {
     position: relative;
     bottom: 6rem;
+    @media screen and (max-width: 576px) {
+      width: 16rem;
+      bottom: 0;
+      padding-top: 2rem;
+    }
   }
   .flex-img {
     display: flex;
@@ -49,8 +62,12 @@
   }
   .subscribe {
     background: aliceblue;
-    padding: 12px 15px;
+    padding: 10px 15px;
     border-radius: 7px;
+    @media (max-width: 576px) {
+      margin-right: 6px;
+      padding: 10px 10px;
+    }
   }
   .sub-container {
     background-color: rgba(255, 255, 255, 0.2);
@@ -61,18 +78,28 @@
     justify-content: space-between;
     border-radius: 6px;
     @media (max-width: 576px) {
-        width: 100%;
+      padding: 0;
+      width: 100%;
+      p {
+        padding-left: 0.7rem;
+      }
     }
-
   }
-  .bottom{
-      padding: 0 5rem;
+  .bottom {
+    padding: 0 5rem;
+    @media screen and (max-width: 576px) {
+      padding: 0;
+    }
   }
-  .p-width{
-      width: 68%;
+  .p-width {
+    width: 68%;
   }
-  .community{
-      flex-direction: column;
-      justify-content: flex-start;
+  .community {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .reserve {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

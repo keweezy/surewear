@@ -1,17 +1,18 @@
 import React from 'react';
 import {Box, Grid} from '@material-ui/core';
-import Logo from '../../assests/Vasiti-Logo-black 1.png';
+import Logo from '../../assests/clipart869091.png';
 import {Button} from '@material-ui/core';
+import Hidden from '@material-ui/core/Hidden';
 import './style.scss';
 
 const Navbar = () => {
   return (
     <Grid container id="navbar">
-      <Grid item md xs={12}>
+      <Grid item md xs={12} className="xs-logo">
+        <Hidden only="xs">
         <Box
           display="flex"
-          justifyContent="space-between"
-          padding="0.5rem 7rem"
+          justifyContent="flex-end"
           alignItems="center"
         >
           <img src={Logo} alt="" />
@@ -33,10 +34,15 @@ const Navbar = () => {
             </Button>
           </Box>
         </Box>
+        </Hidden>
+        <Hidden smUp>
+        <img src={Logo} alt="" />
+        </Hidden>
       </Grid>
+      <Hidden only="xs">
       <Grid container>
         <Grid item md sm>
-          <Box display="flex" padding="0.5rem 11rem" justifyContent="space-evenly" className="btm-div">
+          <Box display="flex" padding="0.5rem" justifyContent="space-evenly" className="btm-div">
             <Box>
               <p>MARKETPLACE</p>
             </Box>
@@ -58,6 +64,7 @@ const Navbar = () => {
           </Box>
         </Grid>
       </Grid>
+      </Hidden>
     </Grid>
   );
 };

@@ -6,11 +6,11 @@ import WebPage from './Page/WebPage';
 
 const App = () => {
   return (
-    <Grid>
+    <>
       <Navbar />
       <WebPage />
       <Footer />
-    </Grid>
+    </>
   );
 };
 

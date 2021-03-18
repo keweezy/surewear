@@ -1,4 +1,4 @@
-.modal-container {
+#modal-container {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -9,6 +9,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  p{
+    font-family: sans-serif;
+    font-size: 12px;
+  }
 
   .backDrop {
     position: absolute;
@@ -36,13 +40,18 @@
       display: flex;
       justify-content: space-between;
       padding: 1rem 25px 0;
+      align-items: center;
 
       h4 {
         font-style: normal;
-        font-weight: 500;
+        font-weight: bold;
         font-size: 19px;
         line-height: 30px;
         color: black;
+        font-family: sans-serif;
+        @media (max-width:576px){
+          font-size: 17px;
+        }
       }
     }
 
@@ -52,9 +61,6 @@
       max-height: 40rem;
       height: 100%;
     }
-  }
-  p {
-    font-size: 12px !important;
   }
   label {
     font-size: 12px !important;
@@ -76,6 +82,9 @@
     &:focus {
       outline: none;
     }
+    @media (max-width: 576px) {
+      width: 15rem;
+    }
   }
   &:focus-within .textarea {
     border: 1px solid #ff5c00;
@@ -88,5 +97,32 @@
     background: #ff5c00 !important;
     font-size: 11px;
     margin-top: 1rem;
+  }
+  .upload {
+    border: solid 1px #dfe2e6;
+    padding: 7px;
+    border-radius: 5px;
+    border-color: #dfe2e6;
+    width: 100%;
+    margin-bottom: 1rem;
+    @media (max-width: 576px) {
+      width: 13.9rem;
+    }
+  }
+  .radios {
+    @media (max-width: 576px) {
+      display: flex;
+      flex-flow: row wrap;
+      row-gap: 0.7rem;
+      span {
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+  .width-100 {
+    @media (max-width: 576px) {
+      width: 100%;
+    }
   }
 }

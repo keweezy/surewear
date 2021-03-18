@@ -5,9 +5,7 @@ import {Button} from '@material-ui/core';
 import {useForm} from 'react-hook-form';
 
 const Modal = ({
-  children,
   onClose,
-  modalText,
   boxClasses,
   modallength,
   setStory,
@@ -18,42 +16,59 @@ const Modal = ({
   };
   const [vendor, setVendor] = React.useState(false);
   const [customer, setCustomer] = React.useState(true);
+  const [prevImage, setPrevImage] = React.useState();
   const {register, handleSubmit, errors} = useForm({
     mode: 'onBlur',
   });
+  const fileInputRef = React.useRef();
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+
+    const reader = new FileReader();
+
+    reader.onload = function () {
+      setPrevImage(reader.result);
+    };
+
+    reader.readAsDataURL(file);
+  };
+  console.log(prevImage);
   const onFormSubmit = (vals) => {
-    console.log(vals);
     setStory([
       ...story,
       {
         firstName: vals.firstName,
         lastName: vals.lastName,
         location: vals.location,
-        // image: vals.image[0]['name'] || '',
+        image: prevImage,
         service: vals.customer === 'on' ? 'customer' : 'vendor',
+        story: vals.shareStory,
       },
     ]);
+    onModalClick();
   };
   return (
-    <div className="modal-container">
+    <div id="modal-container">
       <div className="backDrop"></div>
       <div className={`contentwrapper ${boxClasses}`}>
         <div className="modal_header">
-          {/* <h4>{modalText}</h4> */}
           <h4>Share your amazing story</h4>
-          <p onClick={onModalClick} className="cursor-pointer">
+          <p
+            onClick={onModalClick}
+            style={{cursor: 'pointer', fontWeight: 'bolder', fontSize:'20px', color:'#ff5c00'}}
+          >
             X
           </p>
         </div>
         <div className={`${modallength} modal_content`}>
           <form onSubmit={handleSubmit(onFormSubmit)}>
-            <Textbox
-              label="Upload your picture"
-              type="file"
+            <input
               name="image"
-              customRef={register({
-                required: false,
-              })}
+              className="upload"
+              type="file"
+              accept=".jpg, .jpeg, .png"
+              ref={fileInputRef}
+              onChange={handleChange}
             />
             <div className="flex" style={{justifyContent: 'space-between'}}>
               <Textbox
@@ -91,8 +106,8 @@ const Modal = ({
               style={{alignItems: 'baseline', justifyContent: 'space-between'}}
             >
               {' '}
-              <p>What did you interact with Vasiti as?</p>
-              <div>
+              <p>What did you interact with SureWears as?</p>
+              <div className="radios">
                 <span>
                   <input
                     type="radio"
@@ -133,7 +148,7 @@ const Modal = ({
             <Textbox
               label="Locaton"
               name="location"
-              boxClasses="text"
+              boxClasses="text width-100"
               error={errors.location && 'This field is required'}
               customRef={register({
                 required: true,

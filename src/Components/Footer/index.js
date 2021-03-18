@@ -7,7 +7,7 @@ import './style.scss';
 const Footer = () => {
   return (
     <Grid container id="footer">
-      <Grid container justify="center">
+      <Grid container justify="center" className="reverse">
         <Grid className="flex-img" item md xs={12}>
           <img src={sub} alt="" className="mobile"/>
         </Grid>
@@ -18,7 +18,7 @@ const Footer = () => {
             </h4>
             <p className="p-width">
               We’d make sure you’re always first to know what’s happening on
-              Vasiti—thus, the world.
+              SureWears—thus, the world.
             </p>
             <div className="sub-container">
               <p>enter your email address</p>
@@ -30,11 +30,13 @@ const Footer = () => {
       <Grid container className="bottom">
         <Grid container item md={4} xs={12}>
           <Grid item md xs>
+           <span>
             <h5>Company</h5>
             <p>About us</p>
             <p>Term of Use</p>
             <p>Privacy Policy</p>
             <p>Press & Media</p>
+           </span>
           </Grid>
           <Grid item md xs>
             <h5>Products</h5>
@@ -49,7 +51,7 @@ const Footer = () => {
           <Grid item md xs>
             <h5>Careers</h5>
             <p>Become a Campus Rep</p>
-            <p>Become a Vasiti Influencer</p>
+            <p>Become a SureWears Influencer</p>
             <p>Become a Campus writer</p>
             <p>Become an Affiliate</p>
           </Grid>

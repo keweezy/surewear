@@ -1,8 +1,7 @@
 #webpage {
-  position: relative;
   height: auto;
   h5 {
-    font-family: Inter;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -10,9 +9,13 @@
     letter-spacing: -0.02em;
     color: #000000;
     margin-bottom: 0;
+    @media screen and (max-width: 576px) {
+      font-size: 33px;
+      line-height: 40px;
+    }
   }
   p {
-    font-family: Inter;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -23,22 +26,35 @@
 
     color: #494949;
   }
-  .circle {
+  h6 {
+    font-family: sans-serif;
+  }
+  .circle1 {
     clip-path: circle(50% at 50% 50%);
     background-color: #fff8f5;
     height: 35rem;
     width: 35rem;
     position: absolute;
-    right: 22rem;
-    // z-index: 1;
-    // top:6rem
+    right: 17rem;
+    top: 13rem;
+    z-index: -1;
+    @media screen and (max-width: 576px) {
+      height: 21rem;
+      width: 21rem;
+      left: auto;
+      top: 37rem;
+    }
   }
   .testi-img {
-    // z-index: 1;
+    z-index: 3;
     position: relative;
     height: 30rem;
     margin-top: 3rem;
-    top: 1rem;
+    @media screen and (max-width: 576px) {
+      height: 20rem;
+      width: 23rem;
+      top: 0;
+    }
   }
   .second-layer {
     background-color: #222222;
@@ -48,6 +64,10 @@
     h5 {
       color: white;
     }
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .circle {
       background-color: #2e2e2e;
       height: 37rem;
@@ -56,6 +76,14 @@
       right: 6rem;
       bottom: top;
       top: 2rem;
+      clip-path: circle(50% at 50% 50%);
+      @media screen and (max-width: 576px) {
+        height: 23rem;
+        width: 23rem;
+        left: auto;
+        top: 6rem;
+        right: auto;
+      }
     }
     .customer {
       width: fit-content;
@@ -63,19 +91,34 @@
       border: solid 1px;
       border-radius: 5px;
     }
+    .img-div {
+      display: inline-flex;
+      width: 100%;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      @media screen and (max-width: 576px) {
+        padding-bottom: 0;
+      }
+    }
   }
   .third-layer {
     padding: 2rem 10rem;
     display: inline-flex;
     column-gap: 10rem;
+    @media screen and (max-width: 576px) {
+      padding: 0;
+    }
     .circle-img {
       height: 10rem;
       border-radius: 50%;
     }
     span {
-      background-color: green;
-      padding: 0.4rem;
+      background-color: #eef8ff;
+      padding: 0.3rem 0.6rem;
       margin-left: 2rem;
+      border-radius: 8px;
+      font-family: sans-serif;
     }
     h6 {
       font-size: 1.5rem;
@@ -88,6 +131,11 @@
     // border: solid;
     overflow-y: hidden;
     position: relative;
+    @media screen and (max-width: 576px) {
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .circle-fourth {
       clip-path: circle(50% at 50% 50%);
       background: rgba(255, 92, 0, 0.03);
@@ -97,10 +145,74 @@
       bottom: -5rem;
       right: 9rem;
     }
+    .shopping {
+      @media screen and (max-width: 576px) {
+        background: rgba(255, 92, 0, 0.03);
+        border-radius: 50%;
+        padding-top: 2rem;
+      }
+    }
     img {
       z-index: 1;
       position: relative;
       bottom: -4px;
+      left: 6rem;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        left: 0;
+      }
+    }
+    h6 {
+      font-size: 1.5rem;
+    }
+    .strike {
+      left: 0 !important;
+    }
+  }
+  .pad {
+    padding-left: 11rem;
+    @media screen and (max-width: 576px) {
+      padding-left: 0rem;
+      padding: 0 1rem;
+    }
+  }
+  .xs-flex {
+    @media screen and (max-width: 576px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .strike {
+    max-width: 14rem;
+  }
+  .pad2 {
+    padding: 1rem 7rem;
+    font-family: sans-serif;
+    @media screen and (max-width: 576px) {
+      padding: 0;
+    }
+  }
+  .stories {
+    padding: 2rem 1rem;
+    max-height: 40rem;
+    overflow: auto;
+    @media screen and (max-width: 576px) {
+      padding: 4rem 2rem;
+    }
+  }
+  .img-position {
+    display: inline-flex;
+    padding-left: 4rem;
+    @media (max-width: 576px) {
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+    }
+  }
+  .width {
+    @media (min-width: 577px) {
+      padding-left: 7rem;
+      width: 64%;
     }
   }
 }
