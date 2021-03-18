@@ -119,6 +119,8 @@
     }
     .circle-img {
       height: 10rem;
+      width: 10rem;
+      object-fit: cover;
       border-radius: 50%;
     }
     span {
