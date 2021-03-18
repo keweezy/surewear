@@ -144,7 +144,6 @@ const Modal = ({
                 </span>
               </div>
             </div>
-            <p>City or Higher Institution (for Students)</p>
             <Textbox
               label="Locaton"
               name="location"
