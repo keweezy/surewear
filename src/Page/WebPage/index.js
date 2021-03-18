@@ -122,10 +122,10 @@ const WebPage = () => {
             </span>
             <Box>
               <p>
-                I had the best experience shopping with SureWears. Usability of
+                I had the best experience shopping with SureWear. Usability of
                 the website was great, very good customer service, an all round
                 great experience. I would definately be coming back! I had the
-                best experience shopping with SureWears. Usability of the
+                best experience shopping with SureWear. Usability of the
                 website was great, very good customer service, an all round
                 great experience. I would definately be coming back!
               </p>
@@ -161,7 +161,7 @@ const WebPage = () => {
               <p>
                 After weeks of searching the internet and trying to navigate all
                 the restrictions on purchases and returns for my daughter's
-                First Communion dress, we made an appointment at SureWears
+                First Communion dress, we made an appointment at SureWear
                 Boutique. What a delightful experience. First impression ~ the
                 variety and number of styles to chose from was amazing. Staff
                 was so helpful guiding us through the choice and selecting
@@ -185,10 +185,10 @@ const WebPage = () => {
             <h6 style={{marginBottom:'1rem'}}>Bisola's Experience</h6>
             <span>VENDOR</span>
             <p>
-              I had the best experience shopping with SureWears. Usability of
+              I had the best experience shopping with SureWear. Usability of
               the website was great, very good customer service, an all round
               great experience. I would definately be coming back! I had the
-              best experience shopping with SureWears. Usability of the website
+              best experience shopping with SureWear. Usability of the website
               was great, very good customer service, an all round great
               experience. I would definately be coming back!
             </p>

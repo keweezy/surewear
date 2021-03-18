@@ -25,11 +25,24 @@
     height: 80px;
     @media (min-width: 577px) {
       position: absolute;
-      left: 10rem;
+      left: 7.7rem;
     }
   }
   .xs-logo {
     padding: 1rem 10rem;
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      h3 {
+        font-size: 2rem;
+        font-family: cursive;
+        margin: 0;
+        position: relative;
+        @media (max-width: 576px) {
+          right: 30px;
+        }
+      }
+    }
     @media (max-width: 576px) {
       padding: 2rem 1rem 0;
     }
