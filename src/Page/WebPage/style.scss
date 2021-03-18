@@ -38,11 +38,19 @@
     right: 17rem;
     top: 13rem;
     z-index: -1;
+    @media screen and (max-width: 768px) {
+      height: 35rem;
+      width: 35rem;
+      left: auto;
+      top: 37rem;
+      right:auto
+    }
     @media screen and (max-width: 576px) {
       height: 21rem;
       width: 21rem;
       left: auto;
-      top: 37rem;
+      top: 34rem;
+      right:auto
     }
   }
   .testi-img {
