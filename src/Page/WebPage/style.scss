@@ -72,7 +72,7 @@
     }
     @media screen and (max-width: 576px) {
       display: flex;
-      flex-direction: column-reverse;
+      flex-flow: column-reverse;
     }
     .circle {
       background-color: #2e2e2e;
@@ -111,7 +111,7 @@
     display: inline-flex;
     column-gap: 10rem;
     @media screen and (max-width: 576px) {
-      padding: 0;
+      padding: 0 0 1.5rem 0;
     }
     .circle-img {
       height: 10rem;
@@ -140,7 +140,7 @@
     @media screen and (max-width: 576px) {
       padding: 3rem 1rem;
       display: flex;
-      flex-direction: column-reverse;
+      flex-flow: column-reverse;
     }
     .circle-fourth {
       clip-path: circle(50% at 50% 50%);

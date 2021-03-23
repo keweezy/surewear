@@ -106,7 +106,7 @@ const Modal = ({
               style={{alignItems: 'baseline', justifyContent: 'space-between'}}
             >
               {' '}
-              <p>What did you interact with SureWears as?</p>
+              <p>What did you interact with SureWear as?</p>
               <div className="radios">
                 <span>
                   <input

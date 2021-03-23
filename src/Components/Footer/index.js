@@ -18,7 +18,7 @@ const Footer = () => {
             </h4>
             <p className="p-width">
               We’d make sure you’re always first to know what’s happening on
-              SureWears—thus, the world.
+              SureWear—thus, the world.
             </p>
             <div className="sub-container">
               <p>enter your email address</p>
@@ -51,7 +51,7 @@ const Footer = () => {
           <Grid item md xs>
             <h5>Careers</h5>
             <p>Become a Campus Rep</p>
-            <p>Become a SureWears Influencer</p>
+            <p>Become a SureWear Influencer</p>
             <p>Become a Campus writer</p>
             <p>Become an Affiliate</p>
           </Grid>

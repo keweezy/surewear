@@ -80,6 +80,7 @@
     @media (max-width: 576px) {
       padding: 0;
       width: 100%;
+      align-items: center;
       p {
         padding-left: 0.7rem;
       }
@@ -95,11 +96,11 @@
     width: 68%;
   }
   .community {
-    flex-direction: column;
+    flex-flow: column;
     justify-content: flex-start;
   }
   .reserve {
     display: flex;
-    flex-direction: column-reverse;
+    flex-flow: column-reverse;
   }
 }
