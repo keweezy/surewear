@@ -8,6 +8,7 @@ import strike from '../../assests/Vector 3.png';
 import './style.scss';
 import Modal from '../../Components/Modal';
 import Hidden from '@material-ui/core/Hidden';
+import { SlideAnimation } from '../../Components/Util';
 
 const WebPage = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ const WebPage = () => {
   };
   const [story, setStory] = useState([]);
   const select = useRef();
-  React.useEffect(() => {}, [story.length]);
+
   let colors = [
     'red',
     'blue',
@@ -30,10 +31,20 @@ const WebPage = () => {
   let currentColor = 0;
 
   React.useEffect(() => {
+    var test = document.getElementById('rotate-img');
     setInterval(() => {
       select.current.style.color = colors[currentColor++ % colors.length];
     }, 1000);
+
+    setInterval(() => {
+      if (!test.classList.contains('rotate')) {
+        test.classList.add('rotate');
+      } else {
+        test.classList.remove('rotate');
+      }
+    }, 5000);
   }, []);
+
   const stories = story.map((item) => {
     return (
       <Grid item md={3} xs={12}>
@@ -71,6 +82,10 @@ const WebPage = () => {
       </Grid>
     );
   });
+
+  React.useEffect(() => {
+    SlideAnimation()
+  }, []);
   return (
     <Grid container id="webpage">
       {open && <Modal onClose={onClose} story={story} setStory={setStory} />}
@@ -90,8 +105,8 @@ const WebPage = () => {
           </Box>
         </Grid>
         <Grid item md sm xs={12} className="justify-tilt">
-          <Box className="img-position">
-            <img src={testimonialPic} alt="" className="testi-img" />
+          <Box className="img-position scale-up">
+            <img src={testimonialPic} alt="" className="testi-img trans" />
             <div className="circle1"></div>
           </Box>
         </Grid>
@@ -109,7 +124,7 @@ const WebPage = () => {
               src={blackBeauties}
               alt=""
               style={{zIndex: 3, position: 'relative'}}
-              className="testi-img"
+              className="testi-img inline-photo show-on-scroll"
             />
             <div className="circle"></div>
           </Box>
@@ -125,9 +140,9 @@ const WebPage = () => {
                 I had the best experience shopping with SureWear. Usability of
                 the website was great, very good customer service, an all round
                 great experience. I would definately be coming back! I had the
-                best experience shopping with SureWear. Usability of the
-                website was great, very good customer service, an all round
-                great experience. I would definately be coming back!
+                best experience shopping with SureWear. Usability of the website
+                was great, very good customer service, an all round great
+                experience. I would definately be coming back!
               </p>
               <p
                 ref={select}
@@ -157,7 +172,7 @@ const WebPage = () => {
               <p>In Ikeja</p>
               <span>customer</span>
             </Box>
-            <div>
+            <div className="content-box">
               <p>
                 After weeks of searching the internet and trying to navigate all
                 the restrictions on purchases and returns for my daughter's
@@ -165,12 +180,12 @@ const WebPage = () => {
                 Boutique. What a delightful experience. First impression ~ the
                 variety and number of styles to chose from was amazing. Staff
                 was so helpful guiding us through the choice and selecting
-                several different styles that Chika liked. The staff was to quick to
-                realize what Chika favored and brought in several dresses. What a
-                joy for a father to see Chika say, "This is it! I'm saying
-                yes!" Thank you for your expertise, your professionalism, your
-                patience, and your personal attention. We highly recommend your
-                beautiful boutique.
+                several different styles that Chika liked. The staff was to
+                quick to realize what Chika favored and brought in several
+                dresses. What a joy for a father to see Chika say, "This is it!
+                I'm saying yes!" Thank you for your expertise, your
+                professionalism, your patience, and your personal attention. We
+                highly recommend your beautiful boutique.
               </p>
             </div>
           </Box>
@@ -182,25 +197,25 @@ const WebPage = () => {
       <Grid container className="fourth-layer">
         <Grid item md xs={12}>
           <Box className="pad2">
-            <h6 style={{marginBottom:'1rem'}}>Bisola's Experience</h6>
+            <h6 style={{marginBottom: '1rem'}}>Bisola's Experience</h6>
             <span>VENDOR</span>
             <p>
-              I had the best experience shopping with SureWear. Usability of
-              the website was great, very good customer service, an all round
-              great experience. I would definately be coming back! I had the
-              best experience shopping with SureWear. Usability of the website
-              was great, very good customer service, an all round great
-              experience. I would definately be coming back!
+              I had the best experience shopping with SureWear. Usability of the
+              website was great, very good customer service, an all round great
+              experience. I would definately be coming back! I had the best
+              experience shopping with SureWear. Usability of the website was
+              great, very good customer service, an all round great experience.
+              I would definately be coming back!
             </p>
             <p style={{marginBottom: 0}}>SHARE YOUR OWN STORY</p>
-            <img src={strike} alt="" className="strike" />
+            <img src={strike}  alt="" className="strike" />
           </Box>
         </Grid>
-        <Grid item md xs={12}>
-          <img src={shopping} alt="" className="shopping" />
-          <Hidden only="xs">
+        <Grid item md xs={12} className="inline-photo show-on-scroll">
+          <img src={shopping} alt="" id="rotate-img" className="shopping trans" />
+          {/* <Hidden only="xs">
             <div className="circle-fourth"></div>
-          </Hidden>
+          </Hidden> */}
         </Grid>
       </Grid>
     </Grid>
